@@ -34,7 +34,7 @@ pip install flask keyboard
 Para ejecutar la aplicación directamente en Python:
 
 ```bash
-python mini_vkeyboard.py
+python mini_vkeyboard.pyw
 ```
 
 ### Generar un archivo .exe (Build post desarrollo)
@@ -50,7 +50,7 @@ pip install pyinstaller
 2. Compila el script en un ejecutable:
 
 ```bash
-pyinstaller --onefile mini_vkeyboard.py
+pyinstaller --onefile --noconsole --windowed --hidden-import keyboard mini_vkeyboard.pyw
 ```
 
 
@@ -130,7 +130,7 @@ Simular la presión de teclas:
 
 # Personalización
 
-Puedes modificar el código fuente para ajustar las funcionalidades del teclado, los colores, o agregar nuevas acciones en la API. Consulta el archivo principal mini_vkeyboard.py para obtener más detalles sobre cómo están estructuradas las clases y los métodos.
+Puedes modificar el código fuente para ajustar las funcionalidades del teclado, los colores, o agregar nuevas acciones en la API. Consulta el archivo principal mini_vkeyboard.pyw para obtener más detalles sobre cómo están estructuradas las clases y los métodos.
 
 # Licencia
 Este proyecto está bajo la licencia GPLv3

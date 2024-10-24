@@ -400,6 +400,9 @@ class VirtualKeyboard:
         self.master.attributes("-alpha", self.trans_value)
         self.master.wm_deiconify()
 
+    def quit(self):
+        os._exit(0)
+
     @app.route("/keyboard", methods=["POST"])
     def keyboard_action():
         """
@@ -421,7 +424,7 @@ class VirtualKeyboard:
             value = float(request.json.get("value"))
             keyboard1.set_transparency(value)
         elif action == "quit":
-            os._exit(0)
+            keyboard1.quit()
         return json.dumps({"status": "success"}), 200
 
     @app.route("/keyboard/presskey", methods=["POST"])
