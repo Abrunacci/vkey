@@ -8,8 +8,10 @@ from tkinter import *
 from tkinter import messagebox
 
 from flask import Flask, request
+from flask.ext.cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
 
 # if user has the keyboard module installed
 has_keyboard = True
