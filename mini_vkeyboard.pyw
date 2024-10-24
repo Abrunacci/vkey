@@ -8,7 +8,7 @@ from tkinter import *
 from tkinter import messagebox
 
 from flask import Flask, request
-from flask.ext.cors import CORS, cross_origin
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
